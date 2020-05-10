@@ -17,5 +17,21 @@ void rotate90( int mat[r][c])
 // theta(n square), theta(1) space
 // 1. find transpose of matrix
    2. reverse individual coloums
+   
+void rotate90( int mat[n][n])
+{
+  for(int i=0;i<n;i++)
+    for(int j=i+1;j<n;j++)
+      swap(mat[i][j],mat[j][i]); // transpose
 
-
+for( int i=0;i<n;i++)
+{
+   int low=0; high= n-1;
+   while(low<high)
+   {
+   swap(mat[i][low],mat[i][high]); // reverse individual coloums keeping the rows constant
+   low++;
+   high--;
+   }
+}
+}

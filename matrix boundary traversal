@@ -4,6 +4,8 @@
    2
    3
    4
+// theta(r+c)
+
 void btraversal( int mat[r][c])
 {
   if(r==1)

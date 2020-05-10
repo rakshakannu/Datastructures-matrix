@@ -1,0 +1,21 @@
+// naive solution O[n square] space= o[n square]
+// last coloum becomes first row, second last coloum becomes second row
+
+void rotate90( int mat[r][c])
+{
+   int temp[n][n];
+   for(int i=0;i<n;i++)
+    for(int j=0;j<n;j++)
+      temp[n-j-1][i]=mat[i][j];
+  
+  for(int i=0;i<n;i++)
+    for(int j=0;j<n;j++)
+      mat[i][j]=temp[i][j];
+}
+
+// efficient solution
+// theta(n square), theta(1) space
+// 1. find transpose of matrix
+   2. reverse individual coloums
+
+

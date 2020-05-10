@@ -1,0 +1,25 @@
+// row become coloums and coloums become rows.
+// naive solution
+
+void transpose( int mat[n][n])
+{
+  int temp[][] = new temp[n][n];
+  for(int i=0;i<n;i++)
+    for(j=0;j<n;j++)
+      temp[i][j]=mat[j][i];
+  
+  for(int i=0;i<n;i++)
+    for(j=0;j<n;j++)
+      mat[i][j]=temp[i][j];
+}
+
+// better solution
+// one traversal, only swapping all elements except the diagonal elements
+
+void transpose( int mat[n][n])
+{
+  for(int i=0;i<n;i++)
+    for(int j=i+1;j<n;j++)
+      swap(mat[i][j],mat[j][i]);
+}
+

@@ -24,3 +24,20 @@ void search(int mat[r][c], int x)
 // if x is greater than current, then move down, O[r+c] - linear time
 // why top right? - we can also use bottom left. but other two corners can't be used.
 
+int search(int mat[r][c], int x)
+{
+  int i=0; j=c-1;
+  while(i<r && j>=0)
+  {
+  if(mat[i][j]==x)
+  {
+    print(found);
+    return;
+  }
+  else if(at[i][j]>x)
+    j--; // moving left
+  else
+    i++; // moving down
+  }
+  print(not found);
+}

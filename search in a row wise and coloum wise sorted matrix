@@ -1,0 +1,26 @@
+// naive solution O[r*c]
+
+void search(int mat[r][c], int x)
+{
+  for(int i=0;i<r;i++)
+  {
+    for(int j=0;j<c;j++)
+    {
+      if(mat[i][j]==x)
+      {
+        System.out.println("("+i+","+j+",")");
+        return;
+      }
+    }
+  }
+  System.out.println("not found"); // if the element is not there the loop would have completed all the iterations and the complier would 
+  have come out of the loop.
+}
+
+// better solution but tricky
+// begin from top right corner
+// if x is same then print positon
+// if x is smaller than current, then move left
+// if x is greater than current, then move down, O[r+c] - linear time
+// why top right? - we can also use bottom left. but other two corners can't be used.
+

@@ -1,0 +1,29 @@
+// top row, right most coloum, bottom row(reverse), left most coloum (reverse)
+// we maintain 4 variables
+
+void printspiral(int mat[][], int r, int c)
+{
+  int top=0,left=0,bottom=r-1,right=c-1;
+  while(top<=bottom && left<=right)
+  {
+    for(int i=left;i<=right;i++)
+      System.out.println(mat[top][i]+" "); // top row
+    top++;
+    
+    for(int i=top; i<=bottom;i++)
+      System.out.println(mat[i][right]+" "); // right most coloum
+    right--;
+    
+    if(top<=bottom){
+    for(int i=right;i>=left;i--)
+      System.out.println(mat[bottom][i]+" "); // bottom row
+    bottom--;
+    }
+    
+    if(left<=right){
+    for(int i=bottom;i>=top;i--)
+      System.out.println(mat[i][left]+" "); // left most coloum
+    left++;
+    }
+  }
+}

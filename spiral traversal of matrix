@@ -1,5 +1,5 @@
 // top row, right most coloum, bottom row(reverse), left most coloum (reverse)
-// we maintain 4 variables
+// we maintain 4 variables , theta(r*c) - printing every element exactly once.
 
 void printspiral(int mat[][], int r, int c)
 {

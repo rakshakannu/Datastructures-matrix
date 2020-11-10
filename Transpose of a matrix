@@ -3,7 +3,7 @@
 
 void transpose( int mat[n][n])
 {
-  int temp[][] = new temp[n][n];
+  int temp[][] = new int[n][n];
   for(int i=0;i<n;i++)
     for(j=0;j<n;j++)
       temp[i][j]=mat[j][i];
@@ -16,7 +16,7 @@ void transpose( int mat[n][n])
 // better solution
 // one traversal, only swapping all elements except the diagonal elements
 
-void transpose( int mat[n][n])
+void transpose(int mat[n][n])
 {
   for(int i=0;i<n;i++)
     for(int j=i+1;j<n;j++)
